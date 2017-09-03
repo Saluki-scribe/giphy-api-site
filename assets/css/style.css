@@ -1,18 +1,27 @@
 body {
     background-image: url("../images/background-blue.jpg");
-    background-repeat: no-repeat;
+    background-size: 100%;
 }
+
 h1 {
     color: firebrick;
 }
 
-img {
-    width: 200px;
-    height: 150px;
-    margin: 10px 0;
+p {
+    color: white;
 }
 
-#buttons-display {
+img {
+    width: 250px;
+    height: 150px;
+    margin: 10px 10px;
+}
+
+#right-display {
     margin: 10px 0;
     background-color: gray;
+}
+
+#gif-display div {
+    float: left;
 }
