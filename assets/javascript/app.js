@@ -17,17 +17,26 @@ function searchGiphy() {
         $("#gif-display").html(" ");
 
         var rArray = response.data.length;
-        
+            
         for (let i = 0; i < rArray; i++) {
 
             console.log(response);
             
             var gifRating = response.data[i].rating;
             var gifImage = response.data[i].images.downsized.url;
+            var gifStill = response.data[i].images.downsized_still.url;
             
             $("#gif-display").append("<div class = 'col-4'> <p> Rating: " + gifRating + "</p> <img src = '" + gifImage + "'></div>");
-
         }
+
+        $("").on("click", function () {
+            if($(this).attr("data-state") == "still") {
+                $(this).attr("data-state") == "animated"
+            } else {
+                $(this).attr("data-state") == ""
+            }
+        
+        });
 
        
 
@@ -57,15 +66,14 @@ function renderButtons() {
     }
 }
 
-$("#select-gif").on("click", function(event) {
+//Add new button by inputting something and pressing Enter/the "Call" button
+
+$("#new-button").on("click", function(event) {
     event.preventDefault();
 
     var gif = $("#gif-input").val().trim();
-    console.log("Gif input = " + gif);
 
     shownGifs.push(gif);
-
-    console.log(shownGifs);
 
     renderButtons();
     

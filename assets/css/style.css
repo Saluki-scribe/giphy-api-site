@@ -19,7 +19,13 @@ img {
 
 #right-display {
     margin: 10px 0;
-    background-color: gray;
+    background-color: #012757;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#buttons-display {
+    margin-top: 30px;
 }
 
 #gif-display div {
