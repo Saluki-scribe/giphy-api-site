@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-    var shownGifs = ["Vampire", "Werewolf", "Zombie", "Witch", "Ghost", "Demon", "Hellhound", "Monster", "Full Moon", "The Raven"];
+    var shownGifs = ["Vampire", "Werewolf", "Zombie", "Witch", "Ghost", "Demon", "Hellhound", "Monster", "Full Moon", "The Raven", "Grim Reaper", "Bat", "Gravestone", "Skeleton", "Frankenstein's Monster"];
     
 
 function searchGiphy() {
     //Set up initial gifs to display on site load
     console.log("gif-input: " + $("#gif-input").val());
     var gif = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?&q=" + gif + "&api_key=1e91fe5c8cee4fdeb30896944371bd74&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?&q=" + gif + "&rating=pg-13&api_key=1e91fe5c8cee4fdeb30896944371bd74&limit=10";
     
     $.ajax({
         url: queryURL,
@@ -28,7 +28,7 @@ function searchGiphy() {
 
             
             
-            $("#gif-display").append("<div class = 'col-4 picture' > <p> Rating: " + gifRating + "</p> <img src = '" + gifStill + "' data-still ='" + gifStill + "' data-animate = '" + gifImage + "'></div>")    
+            $("#gif-display").append("<div class = 'col-3 picture' > <p> Rating: " + gifRating + "</p> <img src = '" + gifStill + "' data-still ='" + gifStill + "' data-animate = '" + gifImage + "'></div>")    
             console.log("Data-still: " + "data-still");
 
            
