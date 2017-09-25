@@ -52,44 +52,10 @@ function searchGiphy() {
                 $(this).children("img").attr("src", still);
             }
             
-            
-                
-                //, "data-animate");
-                //console.log();
-                //.toggle(1000, function() {
-                   //$(this).attr("src", "data-animate");
-                //});    
         });
-        
-
-        //    $(".picture").on("click", function () {
-        //        $(".picture").attr("src", gifImage);
-        //        console.log("This: " + $(".picture"));
-        //    })
-        
-       
-        
-
-        //$("img").on("click", function (event) {
-
-          //  $(this).html("<div class = 'col-4'> <p> Rating: " + gifRating + "</p> <img src = '" + gifImage + "'></div>");
-
-         //   console.log("This equals: " + this);
-            //if($(this).val() == gifStill) {
-            //    $(this) = gifImage;
-            //} else {
-            //    $(this).val() = gifStill;
-            //}
         
         });
 
-       
-
-        //$("#gif-display").append("<p>" + gifRating + "</p> <img src='" + gifImage + "'>" );
-       // $("#gif-display").append("<img src='" + response.data[1].images.downsized.url + "'>" );
-        //$("#gif-display").append("<img src='" + response.data[2].images.downsized.url + "'>" );
-        
-    //})
 } //End searchGiphy Function
 
 function renderButtons() {
